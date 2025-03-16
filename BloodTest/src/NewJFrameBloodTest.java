@@ -1,3 +1,6 @@
+
+import javax.swing.Action;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -8,6 +11,8 @@
  * @author azizi
  */
 public class NewJFrameBloodTest extends javax.swing.JFrame {
+
+   
 
     /**
      * Creates new form NewJFrameBloodTest
@@ -25,17 +30,122 @@ public class NewJFrameBloodTest extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jFrame1 = new javax.swing.JFrame();
+        BloodTestPanel = new javax.swing.JPanel();
+        lblName = new javax.swing.JLabel();
+        Txtname = new javax.swing.JTextField();
+        lblAge = new javax.swing.JLabel();
+        txtAge = new javax.swing.JTextField();
+        lblTestType = new javax.swing.JLabel();
+        cmbTestType = new javax.swing.JComboBox<>();
+        btnSchedule = new javax.swing.JButton();
+        lblAppointments = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        txtAppointments = new javax.swing.JTextArea();
+
+        jFrame1.setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        BloodTestPanel.setBackground(new java.awt.Color(255, 255, 255));
+        BloodTestPanel.setBorder(javax.swing.BorderFactory.createTitledBorder("Blood Test Scheduler"));
+
+        lblName.setText("patient name");
+
+        lblAge.setText("Age");
+
+        lblTestType.setText("Test Type:");
+
+        cmbTestType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select Test", "Blood Sugar", "Cholesterol", "COVID-19", "HIV Test", "Complete Blood Count" }));
+
+        btnSchedule.setText("Schedule Test");
+
+        lblAppointments.setText("Appointments List:");
+
+        txtAppointments.setColumns(20);
+        txtAppointments.setRows(5);
+        jScrollPane2.setViewportView(txtAppointments);
+
+        javax.swing.GroupLayout BloodTestPanelLayout = new javax.swing.GroupLayout(BloodTestPanel);
+        BloodTestPanel.setLayout(BloodTestPanelLayout);
+        BloodTestPanelLayout.setHorizontalGroup(
+            BloodTestPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(BloodTestPanelLayout.createSequentialGroup()
+                .addGap(14, 14, 14)
+                .addGroup(BloodTestPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(BloodTestPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(lblTestType, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(lblAge, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(lblName, javax.swing.GroupLayout.DEFAULT_SIZE, 89, Short.MAX_VALUE))
+                    .addComponent(btnSchedule)
+                    .addComponent(lblAppointments, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(25, 25, 25)
+                .addGroup(BloodTestPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(BloodTestPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(Txtname)
+                        .addComponent(txtAge)
+                        .addComponent(cmbTestType, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addContainerGap(156, Short.MAX_VALUE))
+        );
+        BloodTestPanelLayout.setVerticalGroup(
+            BloodTestPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(BloodTestPanelLayout.createSequentialGroup()
+                .addGap(45, 45, 45)
+                .addGroup(BloodTestPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(Txtname)
+                    .addComponent(lblName, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(29, 29, 29)
+                .addGroup(BloodTestPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblAge, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtAge, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(33, 33, 33)
+                .addGroup(BloodTestPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(lblTestType, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cmbTestType, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(BloodTestPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(BloodTestPanelLayout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(lblAppointments, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnSchedule)
+                        .addContainerGap())
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BloodTestPanelLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(25, 25, 25))))
+        );
+
+        javax.swing.GroupLayout jFrame1Layout = new javax.swing.GroupLayout(jFrame1.getContentPane());
+        jFrame1.getContentPane().setLayout(jFrame1Layout);
+        jFrame1Layout.setHorizontalGroup(
+            jFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 558, Short.MAX_VALUE)
+            .addGroup(jFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jFrame1Layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(BloodTestPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addContainerGap()))
+        );
+        jFrame1Layout.setVerticalGroup(
+            jFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 366, Short.MAX_VALUE)
+            .addGroup(jFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jFrame1Layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(BloodTestPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addContainerGap()))
+        );
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGap(0, 545, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGap(0, 366, Short.MAX_VALUE)
         );
 
         pack();
@@ -77,5 +187,17 @@ public class NewJFrameBloodTest extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel BloodTestPanel;
+    private javax.swing.JTextField Txtname;
+    private javax.swing.JButton btnSchedule;
+    private javax.swing.JComboBox<String> cmbTestType;
+    private javax.swing.JFrame jFrame1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JLabel lblAge;
+    private javax.swing.JLabel lblAppointments;
+    private javax.swing.JLabel lblName;
+    private javax.swing.JLabel lblTestType;
+    private javax.swing.JTextField txtAge;
+    private javax.swing.JTextArea txtAppointments;
     // End of variables declaration//GEN-END:variables
 }
